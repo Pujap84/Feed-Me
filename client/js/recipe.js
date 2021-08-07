@@ -11,7 +11,7 @@ function renderIndividualRecipe(event) {
         .then((response) => {
             console.log(response);
             document.querySelector("#page").innerHTML = `
-                <div data-id=${response.data.id} class="recipe_search">
+                <div data-id=${response.data.id} class="">
                     <div>
                         <h1>${response.data.title}</h1>
                         <button onclick="renderRecipeResults(event)" class="back-to-results">

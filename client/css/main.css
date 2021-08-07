@@ -1,26 +1,36 @@
-*, body, html { margin: 0; padding: 0; box-sizing: border-box; }
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 body {
-  background: #7F0000;
+    background: #7f0000;
 }
 
 input {
-  border-radius: 0.5rem;
-  border: none;
-  height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    height: 3rem;
 }
 button {
-  padding: 0.75rem 2rem;
-  background: #D6C099;
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0.5rem #FFFFFF;
-  font-size: 2rem;
-  color: #FFFFFF;
+    padding: 0.75rem 2rem;
+    background: #d6c099;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #ffffff;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+#page {
+    padding: 2rem;
 }
 
 /* COLOR PALLET */
@@ -32,7 +42,7 @@ Cream: #D6CEC0
 Beige: #D6C099
  */
 
- /* 
+/* 
 SECONDARY COLOR PALLET
 Burgundy: #7F0000
 Scarlet: #B32800

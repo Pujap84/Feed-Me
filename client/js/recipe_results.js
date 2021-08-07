@@ -26,7 +26,7 @@ function recipeResults(results) {
     return results
         .map(
             (result) => `
-              <div onClick="renderIndividualRecipe(event)" data-id=${result.id} class="recipe_search">
+              <div onClick="renderIndividualRecipe(event)" data-id=${result.id} class="single-recipe">
                   <p>${result.title}</p>
                   <img src="${result.image}" alt="">
                   
