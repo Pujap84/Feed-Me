@@ -7,8 +7,13 @@ const router = express.Router();
 router.post("/", (req, res) => {
   const name = req.body.name;
   const spoonacular_id = Number(req.body.spoonacular_id);
-  const notes = req.body.notes;
-  const rating = Number(req.body.rating);
+
+  console.log("name: " + name);
+  console.log("spoonacular id: " + spoonacular_id);
+
+  //   TODO on frontend, default value for now
+  const notes = "";
+  const rating = 5;
 
   // Get current user
   Sessions.getCurrentUser(req.session).then((user) => {
