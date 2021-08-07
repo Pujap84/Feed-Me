@@ -7,9 +7,7 @@ const router = express.Router();
 router.post("/", (req, res) => {
   const name = req.body.name;
   const spoonacular_id = Number(req.body.spoonacular_id);
-
-  console.log("name: " + name);
-  console.log("spoonacular id: " + spoonacular_id);
+  const image = req.body.image;
 
   //   TODO on frontend, default value for now
   const notes = "";
@@ -20,7 +18,7 @@ router.post("/", (req, res) => {
     if (!user) return res.json({ msg: "User not found" });
 
     // Add recipe to users recipe book
-    Recipe.create(user.id, name, spoonacular_id, notes, rating)
+    Recipe.create(user.id, name, spoonacular_id, notes, rating, image)
       .then((response) => {
         res.json({ msg: "Created recipe", recipe: response });
       })

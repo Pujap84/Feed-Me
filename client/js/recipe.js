@@ -1,9 +1,11 @@
-function renderIndividualRecipe(event) {
+function renderIndividualRecipe(event, recipeId = null) {
   event.preventDefault();
 
   // const recipeId = 641803
+  if (!recipeId) {
+    recipeId = event.currentTarget.dataset.id; // gets me the recipe id from parent div (data-id)
+  }
 
-  const recipeId = event.currentTarget.dataset.id; // gets me the recipe id from parent div (data-id)
   console.log(recipeId);
 
   axios.get(`/api/spoonacular/recipes/${recipeId}`).then((response) => {
@@ -21,6 +23,9 @@ function renderIndividualRecipe(event) {
                             }"/>
                             <input name="spoonacular_id" type="hidden" value="${
                               response.data.id
+                            }"/>
+                            <input name="image" type="hidden" value="${
+                              response.data.image
                             }"/>
                         <button id="search-btn" type="submit">Add to Favourites</button>
                       </form>

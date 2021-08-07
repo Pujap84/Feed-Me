@@ -15,6 +15,7 @@ CREATE TABLE recipes(
     spoonacular_id INT,
     notes TEXT,
     rating INT,
+    image TEXT,
     CONSTRAINT fk_user
       FOREIGN KEY(user_id) 
 	  REFERENCES users(id)

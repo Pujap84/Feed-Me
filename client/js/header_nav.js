@@ -10,7 +10,7 @@ function renderHeaderNav() {
          
 
           <h1 class="material-icons kitchen" onClick="render('IngredientSearch')">kitchen</h1>
-          <h1 class="material-icons menu_book" onClick="render('IngredientSearch')">menu_book</h1>
+          <h1 class="material-icons menu_book" onClick="render('RecipeBook')">menu_book</h1>
           <h1 class="main__headline">FeedMe<span class="material-icons restaurant">restaurant</span></h1>
 
             <ul>
@@ -54,5 +54,7 @@ function render(component) {
     renderIngredientSearch();
   } else if (component === "LogoutUser") {
     logoutUser();
+  } else if (component === "RecipeBook") {
+    renderRecipeBook();
   }
 }
