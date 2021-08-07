@@ -26,6 +26,14 @@ const User = {
 
     return user;
   },
+  findById(id) {
+    const sql = `
+        SELECT * FROM users WHERE id = $1
+    `;
+    return db.query(sql, [id]).then((dbResult) => {
+      return dbResult.rows[0];
+    });
+  },
   update() {}, //TODO
   delete() {}, //TODO
 };
