@@ -19,6 +19,8 @@ button {
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem #FFFFFF;
+  font-size: 2rem;
+  color: #FFFFFF;
 }
 
 /* COLOR PALLET */

@@ -14,8 +14,7 @@ function renderHeaderNav() {
           <h1 class="main__headline">FeedMe<span class="material-icons restaurant">restaurant</span></h1>
 
             <ul>
-                <li> </li>
-                <li class="material-icons logout">logout</li>
+                <li class="material-icons logout" onClick="render('LogoutUser')">logout</li>
             </ul>
           </nav>
         `;
@@ -53,5 +52,7 @@ function render(component) {
         renderSignUpForm();
     } else if (component === "IngredientSearch") {
         renderIngredientSearch();
+    } else if (component === 'LogoutUser') {
+        logoutUser();
     }
 }

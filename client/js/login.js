@@ -28,7 +28,7 @@ function loginUser(event) {
       window.location = "/";
     })
     .catch((error) => {
-      console.log(error.response);
-      document.querySelector("#errors").innerHTML = error.response.data.message;
+      // console.log(error.response.data.error);
+      document.querySelector("#errors").innerHTML = error.response.data.error;
     });
 }
