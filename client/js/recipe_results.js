@@ -9,7 +9,7 @@ function renderRecipeResults(event) {
         .then((response) => {
             console.log(response);
             document.querySelector("#page").innerHTML = `
-                <h1>Your Yummy Recipes</h1>
+                <h1 class="recipe-result-heading">Your Yummy Recipes</h1>
                 <div class="grid-container">
                     ${recipeResults(response.data)}
                 </div>

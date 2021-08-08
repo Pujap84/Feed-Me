@@ -12,3 +12,19 @@
     width: 50%;
     color: #ffffff;
 }
+
+.recipe-result-heading {
+    font-family: "Fredoka One", cursive;
+    font-size: 2.95rem;
+    line-height: 4rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 1.5rem #7d7d7d;
+    color: white;
+    text-align: center;
+}
+
+.grid-container img {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
