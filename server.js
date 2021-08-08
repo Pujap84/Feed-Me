@@ -39,6 +39,6 @@ app.get("/", (req, res) => {
 app.use("/api/users/", usersController);
 app.use("/api/sessions/", sessionsController);
 app.use("/api/spoonacular/", spoonacularController);
-app.use("/api/recipes/", recipesController);
+app.use("/api/recipe/", recipesController);
 
 app.use(errorHandler);

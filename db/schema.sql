@@ -13,11 +13,12 @@ CREATE TABLE recipes(
     user_id INT,
     name TEXT,
     spoonacular_id INT,
-    notes,
-    rating,
+    notes TEXT,
+    rating INT,
+    image TEXT,
     CONSTRAINT fk_user
       FOREIGN KEY(user_id) 
-	  REFERENCES users(user_id)
+	  REFERENCES users(id)
 );
 
 -- CREATE TABLE fridge_items(
