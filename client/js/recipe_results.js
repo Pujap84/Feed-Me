@@ -29,6 +29,7 @@ function recipeResults(results) {
                 <div onClick="renderIndividualRecipe(event)" data-id=${result.id} class="single-recipe">
                     <div class="recipe-info">
                         <h3 class="recipe-title">${result.title}</h3>
+                        <span class="material-icons favorite" onClick="">favorite</span>
                     </div>
                     <img class="recipe-image" src="${result.image}" alt="">
                 </div>
