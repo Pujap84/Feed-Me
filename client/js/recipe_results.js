@@ -26,11 +26,12 @@ function recipeResults(results) {
     return results
         .map(
             (result) => `
-              <div onClick="renderIndividualRecipe(event)" data-id=${result.id} class="single-recipe">
-                  <p>${result.title}</p>
-                  <img src="${result.image}" alt="">
-                  
-              </div>
+                <div onClick="renderIndividualRecipe(event)" data-id=${result.id} class="single-recipe">
+                    <div class="recipe-info">
+                        <h3 class="recipe-title">${result.title}</h3>
+                    </div>
+                    <img class="recipe-image" src="${result.image}" alt="">
+                </div>
         `
         )
         .join("");

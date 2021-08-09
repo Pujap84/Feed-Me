@@ -11,91 +11,91 @@ Beige: #D6C099
 SECONDARY COLOR PALLET
 Burgundy: #7F0000
 Scarlet: #B32800
-Tangerine: #E9A200
+Tangerine:  
 Gold: #FBDD00
  */
 
 .ingredient_search {
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 25%;
-  margin: 0 auto;
-  margin-top: 4rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 4rem;
 }
 
 .search-results {
-  display: flex;
-  align-self: flex-start;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #D6C099;
-  min-width: 80%;
-  margin-left: 2rem;
-  border-radius: 0 0 1.5rem 1.5rem;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #d6c099;
+    min-width: 80%;
+    margin-left: 2rem;
+    border-radius: 0 0 1.5rem 1.5rem;
 }
 .search-results ul {
-  list-style-type: none;
-  padding: 1.5rem 0;
-  width: 100%;
+    list-style-type: none;
+    padding: 1.5rem 0;
+    width: 100%;
 }
 .search-result p {
-  width: 100%;
-  font-family: 'Rubik', sans-serif;
-  font-size: 1.8rem;
-  line-height: 1.8rem;
-  transition: all 0.2s;
-  padding: 0 0.5rem;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    transition: all 0.2s;
+    padding: 0 0.5rem;
 }
 .search-result span {
-  float: right;
+    float: right;
 }
 .search-result p:hover {
-  transform: scale(1.05);
-  background: #E9A200;
+    transform: scale(1.05);
+    background: #e9a200;
 }
 .search-result {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .search-result {
-  padding: 0px 10px;
-  display: flex;
-  align-items: center;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
 }
 
 .search-result .material-icons {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .ingredient_search h1 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 2.95rem;
-  line-height: 4rem;
-  margin-bottom: 3rem;
-  text-shadow: 0 0 1.5rem #7D7D7D;
+    font-family: "Fredoka One", cursive;
+    font-size: 2.95rem;
+    line-height: 4rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 1.5rem #7d7d7d;
 }
 .ingredient_search form {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 #search-query {
-  font-family: 'Rubik', sans-serif;
-  font-size: 1.8rem;
-  width: 80%;
-  margin-right: 0.5rem;
-  padding: 0 1rem;
-  border: none;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.8rem;
+    width: 80%;
+    margin-right: 0.5rem;
+    padding: 0 1rem;
+    border: none;
 }
 #search-btn {
-  padding: 0 2rem;
-  background: #D6C099;
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0.5rem #FFFFFF;
+    padding: 0 2rem;
+    background: #d6c099;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #ffffff;
 }
