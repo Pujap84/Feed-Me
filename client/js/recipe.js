@@ -21,6 +21,7 @@ function renderIndividualRecipe(event) {
                     <div class="each-recipe">
                         <div class="recipe-info">
                             <h1 class="recipe-title">${response.data.title}</h1>
+                            <span class="material-icons favorite" onClick="">favorite</span>
                         </div>
                         <img class="each-recipe-image"src="${
                             response.data.image

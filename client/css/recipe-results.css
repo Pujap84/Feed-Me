@@ -66,3 +66,9 @@
     right: 0;
     left: 0;
 }
+
+.material-icons.favorite {
+    color: #7f0000;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
