@@ -1,13 +1,68 @@
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    justify-items: center;
 }
 
 .recipe_search {
-  display: flex;
-  justify-content: center;
-  margin: 2rem auto;
-  width: 50%;
-  color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 50%;
+    color: #ffffff;
+}
+
+.recipe-result-heading {
+    font-family: "Fredoka One", cursive;
+    font-size: 2.95rem;
+    line-height: 4rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 1.5rem #7d7d7d;
+    color: white;
+    text-align: center;
+}
+
+.recipe-title {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #fff;
+}
+
+.grid-container img {
+    background-color: #ae8781;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    box-shadow: 5px 10px;
+}
+.single-recipe {
+    width: 300px;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.recipe-image {
+    border-radius: 15px;
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    padding-top: 20px;
+}
+.recipe-info {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #5554559e;
+    display: block;
+    padding: 10px 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
