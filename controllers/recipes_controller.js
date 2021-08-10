@@ -15,15 +15,15 @@ router.post("/", (req, res) => {
 
   // Get current user
   Sessions.getCurrentUser(req.session).then((user) => {
-    if (!user) return res.json({ msg: "User not found" });
+    if (!user) return res.json({ msg: "No user or not logged in" });
 
     // Add recipe to users recipe book
     Recipe.create(user.id, name, spoonacular_id, notes, rating, image)
       .then((response) => {
-        res.json({ msg: "Created recipe", recipe: response });
+        res.json({ msg: "Added recipe to the recipe book", recipe: response });
       })
       .catch((err) => {
-        res.json({ msg: "Error creating recipe", error: err });
+        res.json({ msg: "Error adding recipe to the recipe book", error: err });
       });
   });
 });
