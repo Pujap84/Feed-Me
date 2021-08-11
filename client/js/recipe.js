@@ -1,16 +1,19 @@
-function renderIndividualRecipe(event) {
-    event.preventDefault();
+function renderIndividualRecipe(event, recipeId = null) {
+  event.preventDefault();
 
-    // const recipeId = 641803
+  // const recipeId = 641803
 
-    const recipeId = event.currentTarget.dataset.id; // gets me the recipe id from parent div (data-id)
-    console.log(recipeId);
+  //   Recipe id is passed in from recipe book page when clicking details button
+  if (!recipeId) {
+    recipeId = event.currentTarget.dataset.id; // gets me the recipe id from parent div (data-id)
+    console.log("Recipe Id: ", recipeId);
+  }
 
-    axios
-        .get(`/api/spoonacular/recipes/${recipeId}`)
-        .then((response) => {
-            console.log(response);
-            document.querySelector("#page").innerHTML = `
+  axios
+    .get(`/api/spoonacular/recipes/${recipeId}`)
+    .then((response) => {
+      console.log(response);
+      document.querySelector("#page").innerHTML = `
                 <div data-id=${response.data.id} class="single-recipe-display">
                     
                     <section class="back-to-results">
@@ -21,10 +24,14 @@ function renderIndividualRecipe(event) {
                     <div class="each-recipe">
                         <div class="recipe-info">
                             <h1 class="recipe-title">${response.data.title}</h1>
-                            <span class="material-icons favorite" onClick="">favorite</span>
+                            <span class="material-icons favorite" onClick="addToFavourites('${
+                              response.data.title
+                            }', ${response.data.id}, '${
+        response.data.image
+      }')">favorite</span>
                         </div>
                         <img class="each-recipe-image"src="${
-                            response.data.image
+                          response.data.image
                         }" alt="">
                     </div>
                     <h2>Description</h2>    
@@ -32,25 +39,24 @@ function renderIndividualRecipe(event) {
                     <h2>Ingredients</h2>
                     <div class="grid-container-ingredient">
                         ${renderRecipeIngredients(
-                            response.data.extendedIngredients
+                          response.data.extendedIngredients
                         )}
                     </div>
                     <h2>Instructions</h2>
                     ${renderInstructionLink(response.data)}
                 </div>
             `;
-        })
-        .catch((error) => {
-            console.log(error.response);
-            document.querySelector("#errors").innerHTML =
-                error.response.message;
-        });
+    })
+    .catch((error) => {
+      console.log(error.response);
+      document.querySelector("#errors").innerHTML = error.response.message;
+    });
 }
 
 function renderRecipeIngredients(ingredients) {
-    return ingredients
-        .map(
-            (ingredient) => `
+  return ingredients
+    .map(
+      (ingredient) => `
                     <div data-id=${ingredient.id} class="single-ingredient">
                         
                         <div class="ingredient-info">
@@ -60,18 +66,22 @@ function renderRecipeIngredients(ingredients) {
                     
                     </div>
             `
-        )
-        .join("");
+    )
+    .join("");
 }
 
 function renderInstructionLink(recipe) {
-    if (recipe.instructions) {
-        return `
+  if (recipe.instructions) {
+    return `
             <ul>${recipe.instructions}</ul>
         `;
-    } else {
-        return `
+  } else {
+    return `
             <p><a href="${recipe.sourceUrl}">Read the detailed instructions on ${recipe.sourceName}</a></p>
         `;
-    }
+  }
+}
+
+function renderAddToFavorites(response) {
+  return;
 }

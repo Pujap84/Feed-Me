@@ -35,13 +35,20 @@ function renderRecipes(recipes) {
     .join("");
 }
 
-function addToFavourites(event) {
-  event.preventDefault();
-  const form = event.target;
-  const data = Object.fromEntries(new FormData(form));
+function addToFavourites(name, spoonacular_id, image) {
+  const data = {
+    name,
+    spoonacular_id,
+    image,
+  };
 
   axios.post("/api/recipe", data).then((response) => {
     console.log(response);
+    if (response.data.msg === "No user or not logged in") {
+      renderLoginForm();
+    } else {
+      renderRecipeBook();
+    }
   });
 }
 

@@ -1,4 +1,6 @@
 function renderIngredientSearch() {
+  //   Reset ingredients to nil
+  state.fridgeItems = [];
   document.querySelector("#page").innerHTML = `
     <section class="ingredient_search">
       <h1>Search for Ingredients</h1>

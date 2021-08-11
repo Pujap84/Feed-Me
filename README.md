@@ -26,9 +26,10 @@ The aim of this project was to give users a simple interface to discover new and
 - Sourcing ingredient and recipe information from Spoonacular API
 - Save favorite receipes to a 'recipe book'
 
-## Learnings
+## Planning
 
-- TODO
+- Wireframes
+- User Stories
 
 ## Further Development
 
