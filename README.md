@@ -1,10 +1,10 @@
-# FeedMe
+# FeedMe 🍔🍕🥑🍇😋
 
 During COVID lockdowns, there's a tendenancy to rely too much on UBER eats and other food delivery services. It's often easy to forget (or ignore) there's usually a more nutritous and delicous meal waiting for you in your own fridge.
 
 FeedMe aims to help you save money and get more creative in the ktichen by serving up recipes based on ingredients in your fridge.
 
-View a live demo [here](www.google.com).
+View a live demo [here][demo].
 
 ## Motivation
 
@@ -28,8 +28,8 @@ The aim of this project was to give users a simple interface to discover new and
 
 ## Planning
 
-- Wireframes
-- User Stories
+- [Wireframes][wireframes]
+- [User Stories][user-stories]
 
 ## Further Development
 
@@ -39,3 +39,9 @@ The aim of this project was to give users a simple interface to discover new and
 - Pop-up/notification showing how much you can save by not using uber eats!
 - Icons for ingredients in fridge
 - Add custom images, notes etc to the recipe book
+
+<!-- Links -->
+
+[demo]: https://rocky-island-68783.herokuapp.com/
+[wireframes]: https://github.com/Pujap84/Feed-Me/blob/master/planning/FeedMe-Wireframes.jpg
+[user-stories]: https://github.com/Pujap84/Feed-Me/blob/master/planning/user-stories.md
